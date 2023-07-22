@@ -1,11 +1,11 @@
 package mihai.springframework.sfgpetclinic.services.map;
 
 import mihai.springframework.sfgpetclinic.model.Vet;
-import mihai.springframework.sfgpetclinic.services.CrudService;
+import mihai.springframework.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 
     @Override
