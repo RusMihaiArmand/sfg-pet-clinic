@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "types")
-public class PetType {
+public class PetType extends BaseEntity{
 
 
     @Column(name = "name")
