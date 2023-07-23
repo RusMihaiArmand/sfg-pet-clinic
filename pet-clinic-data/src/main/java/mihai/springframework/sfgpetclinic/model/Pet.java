@@ -3,6 +3,7 @@ package mihai.springframework.sfgpetclinic.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 
 @Entity
@@ -24,6 +25,8 @@ public class Pet extends BaseEntity{
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits;
 
     public String getName() {
         return name;
@@ -58,5 +61,11 @@ public class Pet extends BaseEntity{
     }
 
 
+    public Set<Visit> getVisits() {
+        return visits;
+    }
 
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
+    }
 }
